@@ -25,8 +25,14 @@ def nada_main():
     one = Integer(1)
     
     # Calculate match scores using patterns from boolean_ops.py example
-    age_in_range = (age >= age_group_min) & (age <= age_group_max)
-    age_match = age_in_range.if_else(one, zero)
+    first_condition = (age >= age_group_min)
+    second_condition = (age <= age_group_max)
+    
+    # Implement AND logic using nested if_else
+    age_match = first_condition.if_else(
+        second_condition.if_else(one, zero),
+        zero
+    )
     
     # Symptoms match using equality comparison
     symptoms_match = (symptoms == target_symptoms).if_else(one, zero)
