@@ -12,3 +12,7 @@ path = "src/secret_addition.py"
 name = "secret_addition"
 prime_size = 128
 
+[[programs]]
+path = "src/medical_research.py"
+name = "medical_research"
+prime_size = 128
